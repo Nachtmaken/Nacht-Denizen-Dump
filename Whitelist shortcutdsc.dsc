@@ -1,7 +1,7 @@
 whitelist:
     type: command
-    name: whitelist
-    usage: /whitelist on/off
+    name: wl
+    usage: /wl on/off
     description: Used to turn on/off the whitelist.
     permission: oxonscout.whitelist.command
     permission-message: 'You cannot do this!'
