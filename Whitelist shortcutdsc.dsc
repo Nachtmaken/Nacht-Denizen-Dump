@@ -5,6 +5,9 @@ whitelist:
     description: Used to turn on/off the whitelist.
     permission: oxonscout.whitelist.command
     permission-message: 'You cannot do this!'
+    aliases:
+    - whitelist
+    - easywl
     tabcompletion:
       1: on|off
     script:
