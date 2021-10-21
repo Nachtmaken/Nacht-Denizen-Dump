@@ -16,7 +16,7 @@ shortcut:
     permission message: '<&4>You do not have permission to do that!'
     script:
     - if <context.args.get[1]> == prophunt:
-      - execute as_server 'lp user <context.args.get[2]> permission settemp essentials.near.exclude 1h server=arenas true'
+      - execute as_server 'lp user <context.args.get[2]> permission settemp essentials.near.exclude 1h server=arenas'
       - narrate '<&b><context.args.get[2]> has been removed from the near command!'
     - if <context.args.get[1]> == effect:
       - adjust <context.args.get[2]> remove_effects
