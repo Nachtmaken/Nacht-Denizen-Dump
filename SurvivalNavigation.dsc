@@ -9,19 +9,19 @@ NavigationGUI:
 SurvivalHome:
        type: item
        material: red_bed
-       display name: &bSurvival Home
+       display name: <&b>Survival Home
        lore:
        - This item takes you back to your set home
 SurvivalSpawn:
        type: item
        material: bricks
-       display name: &cSurvival Spawn
+       display name: <&c>Survival Spawn
        lore:
        - This item takes you back to the Survival Spawn
 SurvivalShops:
        type: item
        material: cooked_beef
-       display name: &cSurvival Shop
+       display name: <&c>Survival Shop
        lore:
        - This item takes you back to the Survival Shops
 SurvivalNavigationListeners:
