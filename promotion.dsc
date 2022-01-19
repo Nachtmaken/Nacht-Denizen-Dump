@@ -4,6 +4,10 @@ Promotion:
         description: This command promotes people
         usage: /promotion
         permission: oxonscout.promotion
+        aliases:
+        - promote
+        - builder
+        - make
         tabcompletion:
             1: supporter|moderator|admin|builder
             2: <server.online_players.parse[name]>
