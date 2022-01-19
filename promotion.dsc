@@ -14,11 +14,11 @@ Promotion:
                 - narrate '<&b>Player: <context.args.get[2]> has been promoted to supporter'
         - if <context.args.get[1]> = moderator:
             - if <player.has_permission[oxonscout.promote.moderator]>:
-                - execute as_server 'lp user <context.args.get[2]>  parent set moderator'
+                - execute as_server 'lp user <context.args.get[2]> parent set moderator'
                 - narrate '<&b>Player: <context.args.get[2]> has been promoted to Moderator'
         - if <context.args.get[1]> = admin:
             - if <player.has_permission[oxonscout.promote.admin]>:
-                - execute as_server 'lp user <context.args.get[2]>  parent set admin'
+                - execute as_server 'lp user <context.args.get[2]> parent set admin'
                 - narrate '<&b>Player: <context.args.get[2]> has been promoted to Admin'
         - if <context.args.get[1]> = builder:
             - if <player.has_permission[oxonscout.promote.builder]>:
