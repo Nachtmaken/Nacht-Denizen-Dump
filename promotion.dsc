@@ -8,7 +8,7 @@ Promotion:
         - promote
         - builder
         - make
-        tabcompletion:
+        tab completions:
             1: supporter|moderator|admin|builder
             2: <server.online_players.parse[name]>
         script:
