@@ -10,14 +10,14 @@ TournamentCmd:
       - if <context.args.get[1]> = match:
           - announce '<&6>[<&b>!<&6>] <&b>Player: <context.args.get[2]> & <context.args.get[3]> have been choosen for the match!'
           - wait 5
-          - execute as_op 'essentials:tp 21 64 28 <context.args.get[2]>'
-          - execute as_op 'essentials:tp 25 64 40 <context.args.get[3]>'
-          - execute as_op 'essentials:heal 10 <context.args.get[2]>'
-          - execute as_op 'essentials:heal 10 <context.args.get[3]>'
+          - teleport <context.args.get[2]> <location[21,64,21,1,1,world]>
+          - teleport <context.args.get[3]> <location[21,64,21,0,0,world]>
+          - execute as_op 'essentials:heal <context.args.get[2]> 10'
+          - execute as_op 'essentials:heal <context.args.get[3]> 10'
           - execute as_op 'essentials:gm survival <context.args.get[2]>'
           - execute as_op 'essentials:gm survival <context.args.get[3]>'
-          - give TourneySword to:<context.args.get[2]>
-          - give TourneySword to:<context.args.get[3]>
+          - give ToureySword to:<context.args.get[2]>
+          - give ToureySword to:<context.args.get[3]>
           - announce '<&6>[<&b>!<&6>]<&b> The Match will start on 3!'
           - announce '1'
           - wait 1
