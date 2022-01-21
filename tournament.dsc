@@ -16,8 +16,12 @@ TournamentCmd:
           - execute as_op 'essentials:heal <context.args.get[3]> 10'
           - execute as_op 'essentials:gm survival <context.args.get[2]>'
           - execute as_op 'essentials:gm survival <context.args.get[3]>'
-          - give ToureySword to:<context.args.get[2]>
-          - give ToureySword to:<context.args.get[3]>
+          - give ToureySword player:<context.args.get[2]>
+          - give ToureySword player:<context.args.get[3]>
+          - give cooked_beef quantity:64 player:<context.args.get[2]>
+          - give cooked_beef quantity:64 player:<context.args.get[3]>
+          - give ToureyShield player:<context.args.get[2]>
+          - give ToureyShield player:<context.args.get[3]>
           - announce '<&6>[<&b>!<&6>]<&b> The Match will start on 3!'
           - announce '1'
           - wait 1
@@ -37,3 +41,9 @@ ToureySword:
       display name: <&4>Trusty Sword
       Lore:
       - <&5>This sword has a long and rich history which we don't have time for now!
+ToureyShield:
+      type: item
+      material: shield
+      display name: <&4>Trusty Shield
+      Lore:
+      - <&5>This shield has seen many-er wars now it is yours to use!
