@@ -1,4 +1,5 @@
 TournamentCmd:
+#This command is the overall workhorse of the script.
       type: command
       name: tournament
       description: Does a thing.
@@ -31,6 +32,7 @@ TournamentCmd:
 TournamentListeners:
       type: world
       events:
+      #This shows to the players and checks for wether someone dies.
           on player death:
              - announce '<&6>[<&b>!<&6>]<&b> <context.damager.name> has killed <context.entity.name>!!'
              - teleport <context.damager.name> <location[21,64,21,1,1,world]>
