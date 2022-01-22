@@ -35,6 +35,7 @@ TournamentListeners:
              - announce '<&6>[<&b>!<&6>]<&b> <context.damager.name> has killed <context.entity.name>!!'
              - teleport <context.damager.name> <location[21,64,21,1,1,world]>
              - teleport <context.entity.name> <location[21,64,21,1,1,world]>
+#This is for the items for the tournamement!
 ToureySword:
       type: item
       material: iron_sword
