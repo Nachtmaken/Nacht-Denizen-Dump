@@ -33,8 +33,8 @@ TournamentListeners:
       events:
           on player death:
              - announce '<&6>[<&b>!<&6>]<&b> <context.damager.name> has killed <context.entity.name>!!'
-             - execute as_op 'essentials:tp 21 64 10 <context.damager.name>'
-             - execute as_op 'essentials:tp 21 64 10 <context.entity.name>'
+             - teleport <context.damager.name> <location[21,64,21,1,1,world]>
+             - teleport <context.entity.name> <location[21,64,21,1,1,world]>
 ToureySword:
       type: item
       material: iron_sword
