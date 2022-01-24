@@ -75,4 +75,4 @@ PunishCommand:
         permission message: <&4>You don't have permission to do that.
         script:
         - inventory open d:PunishGUI
-        - flag <player> playername:<context.args.get[1]>
+        - flag server playername:<context.args.get[1]>
