@@ -43,3 +43,18 @@ Punish6:
        display name: <&6>Ban Evade
        lore:
        - <&5> Warn the target for Ban Evade.
+PunishmentListeners:
+      type: world
+      events:
+        on player clicks Punish1 in PunishGUI:
+          - execute as_player 'warn misconduct <context.args.get[2]> you have been warned'
+        on player clicks Punish2 in PunishGUI:
+          - execute as_player 'warn spam <context.args.get[2]> you have been warned'
+        on player clicks Punish3 in PunishGUI:
+          - execute as_player 'warn hack <context.args.get[2]> you have been warned'
+        on player clicks Punish4 in PunishGUI:
+          - execute as_player 'warn majorabuse <context.args.get[2]> you have been warned'
+        on player clicks Punish5 in PunishGUI:
+          - execute as_player 'warn grief <context.args.get[2]> you have been warned'
+        on player clicks Punish6 in PunishGUI:
+          - execute as_player 'warn banevade <context.args.get[2]> you have been warned'
