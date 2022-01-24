@@ -48,26 +48,27 @@ PunishmentListeners:
       events:
         on player clicks Punish1 in PunishGUI:
           - define playername <[1]>
-          - execute as_player 'warn misconduct <player.flag[playername]> you have been warned'
+          - execute as_player 'warn misconduct <[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish2 in PunishGUI:
-          - execute as_player 'warn spam <player.flag[playername]> you have been warned'
+          - define playername <[1]>
+          - execute as_player 'warn spam <[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish3 in PunishGUI:
           - define playername <[1]>
-          - execute as_player 'warn hack <player.flag[playername]> you have been warned'
+          - execute as_player 'warn hack <[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish4 in PunishGUI:
           - define playername <[1]>
-          - execute as_player 'warn majorabuse <player.flag[playername]> you have been warned'
+          - execute as_player 'warn majorabuse <[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish5 in PunishGUI:
           - define playername <[1]>
-          - execute as_player 'warn grief <player.flag[playername]> you have been warned'
+          - execute as_player 'warn grief <[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish6 in PunishGUI:
           - define playername <[1]>
-          - execute as_player 'warn banevade <player.flag[playername]> you have been warned'
+          - execute as_player 'warn banevade <[playername]> you have been warned'
           - inventory close d:PunishGUI
 PunishCommand:
         type: command
