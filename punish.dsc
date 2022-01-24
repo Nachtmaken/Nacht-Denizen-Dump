@@ -47,21 +47,26 @@ PunishmentListeners:
       type: world
       events:
         on player clicks Punish1 in PunishGUI:
+          - define playername <[1]>
           - execute as_player 'warn misconduct <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish2 in PunishGUI:
           - execute as_player 'warn spam <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish3 in PunishGUI:
+          - define playername <[1]>
           - execute as_player 'warn hack <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish4 in PunishGUI:
+          - define playername <[1]>
           - execute as_player 'warn majorabuse <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish5 in PunishGUI:
+          - define playername <[1]>
           - execute as_player 'warn grief <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
         on player clicks Punish6 in PunishGUI:
+          - define playername <[1]>
           - execute as_player 'warn banevade <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
 PunishCommand:
@@ -75,4 +80,4 @@ PunishCommand:
         permission message: <&4>You don't have permission to do that.
         script:
         - inventory open d:PunishGUI
-        - flag server playername:<context.args.get[1]>
+        - run PunishmentListerners def:<context.args.get[1]>
