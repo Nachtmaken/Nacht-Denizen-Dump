@@ -47,14 +47,32 @@ PunishmentListeners:
       type: world
       events:
         on player clicks Punish1 in PunishGUI:
-          - execute as_player 'warn misconduct <context.args.get[2]> you have been warned'
+          - execute as_player 'warn misconduct <player.flag[playername]> you have been warned'
+          - inventory close d:PunishGUI
         on player clicks Punish2 in PunishGUI:
-          - execute as_player 'warn spam <context.args.get[2]> you have been warned'
+          - execute as_player 'warn spam <player.flag[playername]> you have been warned'
+          - inventory close d:PunishGUI
         on player clicks Punish3 in PunishGUI:
-          - execute as_player 'warn hack <context.args.get[2]> you have been warned'
+          - execute as_player 'warn hack <player.flag[playername]> you have been warned'
+          - inventory close d:PunishGUI
         on player clicks Punish4 in PunishGUI:
-          - execute as_player 'warn majorabuse <context.args.get[2]> you have been warned'
+          - execute as_player 'warn majorabuse <player.flag[playername]> you have been warned'
+          - inventory close d:PunishGUI
         on player clicks Punish5 in PunishGUI:
-          - execute as_player 'warn grief <context.args.get[2]> you have been warned'
+          - execute as_player 'warn grief <player.flag[playername]> you have been warned'
+          - inventory close d:PunishGUI
         on player clicks Punish6 in PunishGUI:
-          - execute as_player 'warn banevade <context.args.get[2]> you have been warned'
+          - execute as_player 'warn banevade <player.flag[playername]> you have been warned'
+          - inventory close d:PunishGUI
+PunishCommand:
+        type: command
+        name: punish
+        description: Does something
+        usage: /punish <&lt>Does something<&gt>
+        permission: oxonscout.punish
+        tabcompletions:
+          1: <server.online_players.parse[name]>
+        permission message: <&4>You don't have permission to do that.
+        script:
+        - inventory open d:PunishGUI
+        - flag <player> playername:<context.args.get[1]>
