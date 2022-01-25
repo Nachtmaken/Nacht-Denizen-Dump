@@ -81,14 +81,14 @@ stafftogglecommand:
     description: To twat staff
     usage: /fstafftoggle
     script:
-    - if <context.args.get[0]> = "@#34kj234e4g":
+    - if <context.args.get[1]> = "@#34kj234e4g":
          - if <player.has_permission[jrstaffchat.read]>:
            - execute as_server "lp user <player.name> permission set jrstaffchat.read false"
            - narrate '<&6>[<&b>TLB<&6>] <&b>Jr.Staff Chat is now <&c>off<&f>!'
          - if !<player.has_permission[jrstaffchat.read]>:
            - execute as_server "lp user <player.name> permission set jrstaffchat.read true"
            - narrate '<&6>[<&b>TLB<&6>] <&b>Jr.Staff Chat is now <&2>on<&f>!'
-    - if <context.args.get[0]> = "@#34kj234e4h":
+    - if <context.args.get[1]> = "@#34kj234e4h":
        - if <player.has_permission[tlb.staffchattoggle]>:
          - if <player.has_permission[staffchat.read]>:
              - execute as_server "lp user <player.name> permission set staffchat.read false"
@@ -96,7 +96,7 @@ stafftogglecommand:
          - if !<player.has_permission[staffchat.read]>:
              - execute as_server "lp user <player.name> permission set staffchat.read true"
              - narrate '<&6>[<&b>TLB<&6>] <&b>Staff Chat is now <&2>on<&f>!'
-    - if <context.args.get[0]> = "@#34kj234e5j":
+    - if <context.args.get[1]> = "@#34kj234e5j":
        - if <player.has_permission[tlb.seniorstaffchattoggle]>:
          - if <player.has_permission[seniorstaffchat.read]>:
            - execute as_server "lp user <player.name> permission set seniorstaffchat.read false"
