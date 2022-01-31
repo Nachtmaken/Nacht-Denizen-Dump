@@ -49,32 +49,32 @@ PunishmentListeners:
         on player clicks Punish1 in PunishGUI:
           - execute as_player 'warn misconduct <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
-          - discordconnect id:802906872159273008 tokenfile:data/discord_token.txt
-          - discordmessage id:802906872159273008 channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Misconduct.'
+          - discordconnect id:mybot tokenfile:data/discord_token.txt
+          - discordmessage id:mybot channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Misconduct.'
         on player clicks Punish2 in PunishGUI:
           - execute as_player 'warn spam <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
-          - discordconnect id:802906872159273008 tokenfile:data/discord_token.txt
-          - discordmessage id:802906872159273008 channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Spam.'
+          - discordconnect id:mybot tokenfile:data/discord_token.txt
+          - discordmessage id:mybot channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Spam.'
         on player clicks Punish3 in PunishGUI:
           - execute as_player 'warn hack <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
-          - discordconnect id:802906872159273008 tokenfile:data/discord_token.txt
-          - discordmessage id:802906872159273008 channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Hacks.'
+          - discordconnect id:mybot tokenfile:data/discord_token.txt
+          - discordmessage id:mybot channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Hacks.'
         on player clicks Punish4 in PunishGUI:
           - execute as_player 'warn majorabuse <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
-          - discordconnect id:802906872159273008 tokenfile:data/discord_token.txt
-          - discordmessage id:802906872159273008 channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Major Abuse.'
+          - discordconnect id:mybot tokenfile:data/discord_token.txt
+          - discordmessage id:mybot channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Major Abuse.'
         on player clicks Punish5 in PunishGUI:
           - execute as_player 'warn grief <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
-          - discordconnect id:802906872159273008 tokenfile:data/discord_token.txt
-          - discordmessage id:802906872159273008 channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Grief.'
+          - discordconnect id:mybot tokenfile:data/discord_token.txt
+          - discordmessage id:mybot channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Grief.'
         on player clicks Punish6 in PunishGUI:
           - execute as_player 'warn banevade <player.flag[playername]> you have been warned'
-          - discordconnect id:802906872159273008 tokenfile:data/discord_token.txt
-          - discordmessage id:802906872159273008 channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Ban Evade.'
+          - discordconnect id:mybot tokenfile:data/discord_token.txt
+          - discordmessage id:mybot channel:937737230213079100 '@Admin *Warning Issued* Issuer: <player.flag[sender]> Player Warned: <player.flag[playername]> Warning: Ban Evade.'
           - inventory close d:PunishGUI
 PunishCommand:
         type: command
