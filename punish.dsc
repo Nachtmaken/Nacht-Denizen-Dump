@@ -50,31 +50,32 @@ PunishmentListeners:
           - execute as_player 'warn misconduct <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
           - flag server warning:Misconduct
+          - run DiscordWarningEmbed
         on player clicks Punish2 in PunishGUI:
           - execute as_player 'warn spam <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
           - flag server warning:Spam
-          - run DiscordWarningEmbed speed:instantly
+          - run DiscordWarningEmbed
         on player clicks Punish3 in PunishGUI:
           - execute as_player 'warn hack <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
           - flag server warning:Hacks
-          - run DiscordWarningEmbed speed:instantly
+          - run DiscordWarningEmbed
         on player clicks Punish4 in PunishGUI:
           - execute as_player 'warn majorabuse <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
           - flag server warning:Major-Abuse
-          - run DiscordWarningEmbed speed:instantly
+          - run DiscordWarningEmbed
         on player clicks Punish5 in PunishGUI:
           - execute as_player 'warn grief <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
           - flag server warning:Grief
-          - run DiscordWarningEmbed speed:instantly
+          - run DiscordWarningEmbed
         on player clicks Punish6 in PunishGUI:
           - execute as_player 'warn banevade <player.flag[playername]> you have been warned'
           - inventory close d:PunishGUI
           - flag server warning:Ban-Evade
-          - run DiscordWarningEmbed speed:instantly
+          - run DiscordWarningEmbed
 PunishCommand:
         type: command
         name: punish
