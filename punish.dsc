@@ -94,4 +94,4 @@ DiscordWarningEmbed:
     script:
     - discordconnect id:mybot tokenfile:data/discord_token.txt
     - define embed "<discord_embed.with_map[title=Warning Issued;description= Issuer: <player.flag[sender]>. Player Warned: <player.flag[playername]> Warning: <server.flag[warning]>;timestamp=<util.time_now>;color=#00FFFF]>"
-    - discordmessage id:mybot channel:937737230213079100 <[embed]> user:Nachtmaken#4248
+    - discordmessage id:mybot channel:937737230213079100 <[embed]>
