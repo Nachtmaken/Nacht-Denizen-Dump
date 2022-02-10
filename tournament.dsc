@@ -29,11 +29,11 @@ TournamentCmd:
           - give ToureyShield player:<context.args.get[3]>
           #counts down the start of the match
           - announce '<&6>[<&b>!<&6>]<&b> The Match will start on 3!'
-          - announce '1'
+          - announce '<&6>[<&b>!<&6>]<&b> 1'
           - wait 1
-          - announce '2'
+          - announce '<&6>[<&b>!<&6>]<&b> 2'
           - wait 1
-          - announce '3, GGGGGOOOOO!!'
+          - announce '<&6>[<&b>!<&6>]<&b> 3, GGGGGOOOOO!!'
 TournamentListeners:
       type: world
       events:
