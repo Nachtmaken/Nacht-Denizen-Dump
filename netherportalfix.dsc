@@ -3,6 +3,11 @@ netherportal:
       events:
         on player enters portal:
             - inventory open destination:PortalMenu
+        on player clicks PortalNether in PortalMenu:
+            - execute as_server 'mv tp <player> survival_nether'
+        on player clicks PortalEnd in PortalMenu:
+            - execute as_server 'mv tp <player> survival_the_end'
+
 PortalMenu:
         type: inventory
         inventory: chest
