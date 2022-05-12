@@ -12,8 +12,8 @@ TournamentCmd:
           - announce '<&6>[<&b>!<&6>] <&b>Player: <context.args.get[2]> & <context.args.get[3]> have been choosen for the match!'
           - wait 5
           #teleports the player to a set location
-          - teleport <context.args.get[2]> <location[21,64,21,1,1,world]>
-          - teleport <context.args.get[3]> <location[21,64,21,0,0,world]>
+          - teleport <context.args.get[2]> <location[130,64,130,1,1,world]>
+          - teleport <context.args.get[3]> <location[130,64,139,0,0,world]>
           #heals the players
           - execute as_op 'essentials:heal <context.args.get[2]> 10'
           - execute as_op 'essentials:heal <context.args.get[3]> 10'
@@ -40,8 +40,8 @@ TournamentListeners:
       #This shows to the players and checks for wether someone dies.
           on player death:
              - announce '<&6>[<&b>!<&6>]<&b> <context.damager.name> has killed <context.entity.name>!!'
-             - teleport <context.damager.name> <location[21,64,21,1,1,world]>
-             - teleport <context.entity.name> <location[21,64,21,1,1,world]>
+             - teleport <context.damager.name> <location[130,71,127,1,1,world]>
+             - teleport <context.entity.name> <location[130,71,127,1,1,world]>
 #This is for the items for the tournamement!
 ToureySword:
       type: item
