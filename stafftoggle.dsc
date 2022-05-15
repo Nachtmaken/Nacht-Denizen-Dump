@@ -7,7 +7,7 @@ toggleSC:
     permission-message: No permission.
     script:
      - if <player.has_permission[tlb.jrstaff]>:
-       - inventory open d:in@toggleSCgui
+       - inventory open d:toggleSCgui
        - determine FULFILLED
      - if !<player.has_permission[tlb.jrstaff]>:
        - narrate "<&6>[<&b>TLB<&6>]<&4> You do not have access to this command."
@@ -24,7 +24,7 @@ toggleSCgui:
      staffchattoggle: ItemTag2
      srstafftoggle: ItemTag3
     slots:
-    - [] [i@jrstafftoggle] [] [] [i@staffchattoggle] [] [] [i@srstafftoggle] []
+    - [] [jrstafftoggle] [] [] [staffchattoggle] [] [] [srstafftoggle] []
 
 jrstafftoggle:
     type: item
@@ -51,13 +51,13 @@ staff_handler:
     events:
       on player clicks jrstafftoggle in toggleSCgui:
        - execute as_player 'fstafftoggle @#34kj234e4g'
-       - inventory close d:in@toggleSCgui
+       - inventory close d:toggleSCgui
       on player clicks staffchattoggle in toggleSCgui:
        - execute as_player 'fstafftoggle @#34kj234e4h'
-       - inventory close d:in@toggleSCgui
+       - inventory close d:toggleSCgui
       on player clicks srstafftoggle in toggleSCgui:
        - execute as_player 'fstafftoggle @#34kj234e5j'
-       - inventory close d:in@toggleSCgui
+       - inventory close d:toggleSCgui
       on player joins:
         - if <player.has_permission[tlb.staff]>:
           - wait 5s

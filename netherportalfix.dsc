@@ -7,6 +7,8 @@ netherportal:
             - execute as_server 'mv tp <player> survival_nether'
         on player clicks PortalEnd in PortalMenu:
             - execute as_server 'mv tp <player> survival_the_end'
+        on player first login:
+          - execute as_server 'newbie <context.entity.name>'
 
 PortalMenu:
         type: inventory
