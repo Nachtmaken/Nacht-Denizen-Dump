@@ -4,7 +4,7 @@ NavigationGUI:
       gui: true
       size: 9
       slots:
-      - [] [] [i@SurvivalSpawn] [] [i@SurvivalHome] [] [i@SurvivalShops] [] []
+      - [] [] [SurvivalSpawn] [] [SurvivalHome] [] [SurvivalShops] [] []
 
 SurvivalHome:
        type: item
@@ -49,4 +49,4 @@ SurvivalNavigationCommand:
        - navigate
        - nav
        script:
-       - inventory open d:in@NavigationGUI
+       - inventory open d:NavigationGUI
