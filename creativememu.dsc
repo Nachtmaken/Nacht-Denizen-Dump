@@ -4,7 +4,7 @@ creativeGUI:
       gui: true
       size: 9
       slots:
-      - [] [] [i@PlotHome] [] [i@NewPlot] [] [i@CreativeSpawn] [] []
+      - [] [] [PlotHome] [] [NewPlot] [] [CreativeSpawn] [] []
 
 PlotHome:
        type: item
@@ -47,10 +47,10 @@ CreativeCommand:
        - men
        - claim
        script:
-       - inventory open d:in@creativeGUI
+       - inventory open d:creativeGUI
 CreativeMenu:
       type: world
       events:
          on player join:
          - wait 5
-         - inventory open d:in@creativeGUI
+         - inventory open d:creativeGUI
