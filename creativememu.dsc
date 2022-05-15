@@ -34,7 +34,7 @@ SurvivalNavigationListeners:
             - execute as_player "p auto"
             - inventory close NavigationGUI
         on player clicks CreativeSpawn in creativeGUI:
-            - execute as_player "warp creative"
+            - execute as_player "masuite:warp creative"
             - inventory close NavigationGUI
 CreativeCommand:
        type: command
