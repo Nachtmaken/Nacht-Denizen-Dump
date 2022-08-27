@@ -4,7 +4,7 @@ creativeGUI:
       gui: true
       size: 9
       slots:
-      - [] [] [PlotHome] [] [NewPlot] [] [CreativeSpawn] [] []
+      - [] [] [i@PlotHome] [] [i@NewPlot] [] [i@CreativeSpawn] [] []
 
 PlotHome:
        type: item
@@ -34,7 +34,7 @@ SurvivalNavigationListeners:
             - execute as_player "p auto"
             - inventory close NavigationGUI
         on player clicks CreativeSpawn in creativeGUI:
-            - execute as_player "masuite:warp creative"
+            - execute as_player "warp creative"
             - inventory close NavigationGUI
 CreativeCommand:
        type: command
@@ -47,10 +47,10 @@ CreativeCommand:
        - men
        - claim
        script:
-       - inventory open d:creativeGUI
+       - inventory open d:in@creativeGUI
 CreativeMenu:
       type: world
       events:
          on player join:
          - wait 5
-         - inventory open d:creativeGUI
+         - inventory open d:in@creativeGUI
