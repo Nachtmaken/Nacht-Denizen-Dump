@@ -84,6 +84,7 @@ PunishCommand:
         permission: oxonscout.punish
         tabcompletions:
           1: <server.online_players.parse[name]>
+          2: (note)
         permission message: <&4>You don't have permission to do that.
         script:
         - inventory open d:PunishGUI
@@ -93,6 +94,6 @@ PunishCommand:
 DiscordWarningEmbed:
     type: task
     script:
-    - discordconnect id:mybot tokenfile:<secret[my_bot_token]>
+    - discordconnect id:bot2 token:<secret[my_bot_token]>
     - define embed "<discord_embed.with_map[title=Warning Issued;description= Issuer: <player.flag[sender]>. Player Warned: <player.flag[playername]> Warning: <server.flag[warning]> Reason: <player.flag[reason]>;timestamp=<util.time_now>;color=#00FFFF]>"
-    - discordmessage id:mybot channel:937737230213079100 <[embed]>
+    - discordmessage id:bot2 channel:937737230213079100 <[embed]>

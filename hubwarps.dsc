@@ -8,6 +8,13 @@ CompassListeners:
       type: world
       events:
           on player clicks block:
-            - execute as_player 'warps'
+            - execute as_player 'commandpanels:cp panel-1'
           on player joins:
             - give WarpCompass
+Warpcommand:
+    type: command
+    name: warps
+    description: warps
+    usage: /warps
+    script:
+    - execute as_player 'commandpanels:cp panel-1'
