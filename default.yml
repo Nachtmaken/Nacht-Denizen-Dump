@@ -1,0 +1,176 @@
+# This is the default configuration file of BungeeTabListPlus.
+
+#
+
+# Since the configuration of the plugin is quite complex you
+
+# might want to have a look at the wiki from time to time.
+
+#
+
+# Wiki: https://github.com/CodeCrafter47/BungeeTabListPlus/wiki
+
+#  Placeholders: https://github.com/CodeCrafter47/BungeeTabListPlus/wiki/Placeholders
+
+#  Examples: https://github.com/CodeCrafter47/BungeeTabListPlus/wiki/Examples
+
+#
+
+
+
+showTo: all
+
+priority: 0
+
+
+
+showHeaderFooter: true
+
+header:
+
+  - "&cWelcome &f${viewer name} to Scoutlink"
+
+  - "&eW&celcome &f${viewer name} to Scoutlink"
+
+  - "&eWe&clcome &f${viewer name} to Scoutlink"
+
+  - "&eWel&ccome &f${viewer name} to Scoutlink"
+
+  - "&eWelc&come &f${viewer name} to Scoutlink"
+
+  - "&eWelco&cme &f${viewer name} to Scoutlink"
+
+  - "&eWelcom&ce &f${viewer name} to Scoutlink"
+
+  - "&eWelcome &f${viewer name} to Scoutlink"
+
+  - "&cW&eelcome &f${viewer name} to Scoutlink"
+
+  - "&cWe&elcome &f${viewer name} to Scoutlink"
+
+  - "&cWel&ecome &f${viewer name} to Scoutlink"
+
+  - "&cWelc&eome &f${viewer name} to Scoutlink"
+
+  - "&cWelco&eme &f${viewer name} to Scoutlink"
+
+  - "&cWelcom&ee &f${viewer name} to Scoutlink"
+
+  - "&cWelcome &f${viewer name} to Scoutlink"
+
+headerAnimationUpdateInterval: 0.2
+#This is the bottom bit of the file
+footer: |-
+
+  &4Scoutlink Minecraft Server
+
+  &fIf you've got issues make sure to reach out to staff
+
+
+
+# Configure whether hidden players appear on the tab list
+
+# see https://github.com/CodeCrafter47/BungeeTabListPlus/wiki/Hidden-Players
+
+hiddenPlayers: VISIBLE_TO_ADMINS
+
+
+
+playerSets:
+
+  all_players:
+    filter: true
+  hub:
+    filter: ${player server} == "hub"
+  survival:
+    filter: ${player server} == "survival"
+  creative:
+    filter: ${player server} == "creative"
+  skyblock:
+    filter: ${player server} == "skyblock"
+
+
+type: FIXED_SIZE
+
+size: 60
+
+
+
+defaultIcon: colors/dark_gray.png
+
+defaultPing: 1000
+
+
+
+
+components:
+
+- !table
+  columns:
+    0:
+    - {text: "&#3da1cc&lHub", icon: "colors/green.png", ping: 0}
+    - !players
+      playerSet: hub
+      playerOrder: "luckpermsbungee_primary_group_weight desc, name desc"
+      playerComponent: "${player vault_prefix} ${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+    1: 
+    - {text: "&#3da1cc&lSURVIVAL", icon: "colors/aqua.png", ping: 0}
+    - !players
+      playerSet: survival
+      playerOrder: "luckpermsbungee_primary_group_weight desc, name desc"
+      playerComponent: "${player vault_prefix} ${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+    2:
+    - {text: "&#3da1cc&lCREATIVE", icon: "colors/aqua.png", ping: 0}
+    - !players
+      playerSet: creative
+      playerOrder: "luckpermsbungee_primary_group_weight desc, name desc"
+      playerComponent: "${player vault_prefix} ${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+    - {text: "", ping: 0}
+    - {text: "&#3da1cc&lSKYBLOCK", icon: "colors/aqua.png", ping: 0}
+    - !players
+      playerSet: skyblock
+      playerOrder: "luckpermsbungee_primary_group_weight desc, name desc"
+      playerComponent: "{player vault_prefix} ${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+    - {text: "", ping: 0}
+
+# Custom placeholders are a powerful mechanism to add more dynamic content
+
+# to the tab list.
+
+# See https://github.com/CodeCrafter47/BungeeTabListPlus/wiki/Custom=Placeholders
+
+customPlaceholders:
+
+  afk_tag:
+
+    !conditional
+
+    condition: ${player essentials_afk}
+
+    true: "&7|&oAFK"
+
+    false: ""
+
+  viewer_colored_ping:
+
+    !conditional
+
+    condition: "${viewer ping} < 150"
+
+    true: ${viewer_colored_ping0}
+
+    false: "&c${viewer ping}"
+
+  viewer_colored_ping0:
+
+    !conditional
+
+    condition: "${viewer ping} < 50"
+
+    true: "&a${viewer ping}"
+
+    false: "&e${viewer ping}"
