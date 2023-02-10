@@ -96,7 +96,7 @@
          - execute as_server 'lp user <player.name> permission settemp tlb.mobwave.cooldown true 2m'
       - if <context.args.get[1]> == clear:
          - foreach <player.location.find_entities.within[400]> as:mobs
-         - execute as_server 'kill <[mobs]>'
+              - execute as_server 'kill <[mobs]>'
     - if <player.has_permission[tlb.mobwave.cooldown]>:
       - narrate '<&6>[<&b>!<&6>]<&b> You have to wait for the cooldown to finish before you can do this command again.'
 Agathaspeech:
