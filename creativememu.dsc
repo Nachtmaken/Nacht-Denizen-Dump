@@ -1,10 +1,11 @@
 creativeGUI:
       type: inventory
       inventory: chest
+      title: <&b>ScoutLink Creative Menu
       gui: true
       size: 9
       slots:
-      - [] [] [i@PlotHome] [] [i@NewPlot] [] [i@CreativeSpawn] [] []
+      - [] [] [PlotHome] [] [NewPlot] [] [CreativeSpawn] [] []
 
 PlotHome:
        type: item
@@ -34,7 +35,7 @@ SurvivalNavigationListeners:
             - execute as_player "p auto"
             - inventory close NavigationGUI
         on player clicks CreativeSpawn in creativeGUI:
-            - execute as_player "warp creative"
+            - execute as_player "spawn"
             - inventory close NavigationGUI
 CreativeCommand:
        type: command
@@ -47,10 +48,10 @@ CreativeCommand:
        - men
        - claim
        script:
-       - inventory open d:in@creativeGUI
+       - inventory open d:creativeGUI
 CreativeMenu:
       type: world
       events:
          on player join:
          - wait 5
-         - inventory open d:in@creativeGUI
+         - inventory open d:creativeGUI
